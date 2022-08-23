@@ -1,0 +1,110 @@
+.button {
+display: inline-block;
+min-width: 216px;
+border-radius: 4px;
+padding: 10px 32px;
+text-align: center;
+margin-right: auto;
+margin-left: auto;
+border: none;
+
+font-family: $mainTextFont;
+font-weight: 700;
+line-height: 1.88;
+letter-spacing: 0.06em;
+color: $backGroundColorMain;
+background-color: $textColorAccent;
+font-size: 16px;
+
+transition: background-color $transitionCubic;
+cursor: pointer;
+
+&:hover,
+&:focus {
+background-color: #188ce8;  
+}
+
+&__subscribe {
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 10px 28px;
+min-width: 200px;
+height: 50px;  
+
+&::after {
+content: "";
+background-image: url(../images/telegram.svg);
+background-size: contain;
+background-repeat: no-repeat;
+
+display: flex;
+width: 24px;
+height: 24px;
+margin-left: 10px;
+}
+}
+}
+
+.button__modal {
+&--close {
+transition: fill $transitionCubic, border-color $transitionCubic;
+position: absolute;
+top:8px;
+right: 8px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+width: 30px;
+height: 30px;
+cursor: pointer;
+
+background: $backGroundColorMain;
+border: 1px solid rgba(0, 0, 0, 0.1);
+border-radius: 50%;
+
+&:hover,
+&:focus {
+fill: $textColorAccent;
+border-color: $textColorAccent;
+}}
+
+&--submit {
+display: flex;
+align-items: center;
+justify-content: center;
+
+font-family: $mainTextFont;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+border-radius: 4px;
+}}
+
+// Portfolio-buttons ----------------------------->
+.button-projects {
+padding: 6px 22px;
+
+font-size: $headerFontSize;
+font-family: $mainTextFont;
+font-weight: 500;
+line-height: 1.62;
+text-align: center;
+letter-spacing: 0.03em;
+color: $textColorHeaders;
+border-style: none;
+background-color: $backGroundColorThird;
+border-radius: 4px;
+
+cursor: pointer;
+transition: background-color $transitionCubic;
+&:hover,
+&:focus {
+color: $backGroundColorMain;
+background-color: $textColorAccent;
+box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+&--current {
+background-color: $textColorAccent;
+color: $backGroundColorMain;
+}}

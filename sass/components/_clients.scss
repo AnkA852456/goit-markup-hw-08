@@ -1,0 +1,54 @@
+.section-clients {
+padding: 94px 0;
+
+&__title {
+margin-bottom: 50px;
+
+font-weight: 700;
+font-size: 36px;
+line-height: 1.17;
+text-align: center;
+letter-spacing: 0.03em;
+color: $textColorHeaders;
+}
+
+&__list {
+@extend %list;
+display: flex;
+}
+
+&__item {
+flex-basis: calc((100% - 30px * 5) / 6);
+height: 92px;
+
+&:not(:last-child) {
+margin-right: 30px;
+}}
+
+&__link {
+@extend %link;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 100%;
+
+color: #AFB1B8;
+border: 1px solid #AFB1B8;
+border-radius: 4px;
+outline: transparent;
+
+transition: border $transitionCubic, background-color $transitionCubic;
+
+&:hover,
+&:focus {
+    color: $textColorAccent;
+border: 1px solid $textColorAccent;
+}
+}
+&__icon {
+width: 106px;
+height: 60px;
+fill: currentColor;
+}
+}

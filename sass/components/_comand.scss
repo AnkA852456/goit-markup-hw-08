@@ -1,0 +1,92 @@
+.section-comand {
+padding: 60px 0;
+background-color: $backGroundColorThird;
+
+@media screen and (min-width: 1200px) {
+padding: 94px 0;   
+}
+
+&__title {
+margin-bottom: 50px;
+
+font-family: $mainTextFont;
+font-weight: 700;
+font-size: 28px;
+line-height: 1.18;
+text-align: center;
+letter-spacing: 0.03em;
+color: $textColorHeaders;
+}
+
+@media screen and (min-width: 1200px) {
+font-size: 36px;
+line-height: 1.17;  
+}
+
+&__list {
+@extend %list;
+
+@media screen and (min-width: 768px) {
+display: flex;
+flex-wrap: wrap;
+text-align: center;   
+}}
+
+&__item {
+background-color: $backGroundColorMain;
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 0px 0px 4px 4px;
+
+@media screen and (min-width: 768px) {
+flex-basis: calc((100% - 30px)/2);
+}
+
+@media screen and (min-width: 1200px) {
+flex-basis: calc((100% - 3 * 30px)/4);
+}}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+.section-comand__item:nth-child(2n+1) {
+margin-right: 30px;
+margin-bottom: 0;
+}
+.section-comand__item:nth-child(1) {
+margin-bottom: 30px;
+}
+.section-comand__item:nth-child(2) {
+margin-bottom: 30px;
+}}
+
+@media screen and (max-width: 767px) {
+.section-comand__item:not(:last-child) {
+margin-bottom: 30px;}  
+}
+
+@media screen and (min-width: 1200px) {
+.section-comand__item:not(:last-child) {
+margin-right: 30px;
+}}
+
+&__designers {
+padding: 30px 32px;
+}
+
+&__name {
+margin-bottom: 10px;
+
+font-family: $mainTextFont;
+font-weight: 500;
+line-height: 1.19;
+letter-spacing: 0.03em;
+color: $textColorHeaders;
+font-size: 16px;
+}
+
+&__position {
+font-family: $mainTextFont;
+line-height: 1.19;
+letter-spacing: 0.03em;
+font-size: 16px;
+margin-bottom: 16px;
+}}
+

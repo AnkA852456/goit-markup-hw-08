@@ -1,0 +1,55 @@
+.section-activity {
+padding-bottom: 94px;
+
+@media screen and (max-width: 1200px) {
+display: none;
+}
+
+&__title {
+margin-bottom: 50px;
+
+font-family: $mainTextFont;
+font-weight: 700;
+font-size: 36px;
+line-height: 1.17;
+text-align: center;
+letter-spacing: 0.03em;
+color: $textColorHeaders;
+}
+
+&__list {
+@extend %list;
+display: flex;
+justify-content: space-between;
+}
+
+&__item {
+position: relative;
+
+flex-basis: calc((100% - 2 * 30px)/3);
+}
+
+&__item:not(:last-child) {
+margin-right: 30px;
+}
+
+&__text {
+position: absolute;
+bottom: 0;
+
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
+height: 70px;
+background-color: rgba(47, 48, 58, 0.8);
+
+font-family: $mainTextFont;
+font-weight: 700;
+font-size: $headerFontSize;
+line-height: 1.14;
+text-align: center;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color: $backGroundColorMain;
+}}
