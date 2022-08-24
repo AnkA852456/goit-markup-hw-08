@@ -2,7 +2,7 @@
 @extend %link;
 padding-top: 24px;
 padding-bottom: 24px;
-width: 134px;
+width: 120px;
 margin-right: 88px;
 
 color: $textColorAccent;
@@ -24,9 +24,6 @@ margin-right: 0;
 &__page-nav{
 color: $textColorLogo;
 
-@media screen and (min-width: 768px) {
-margin-right: 88px;
-}
 @media screen and (min-width: 1200px) {
 margin-right: 93px;
 }}
