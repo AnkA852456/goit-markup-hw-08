@@ -5,14 +5,27 @@ padding-bottom: 60px;
 font-family: $mainTextFont;
 background-color: $backGroundColorSecondary;
 
-&__wrap{
+&__wrap {
+
+@media screen and (min-width: 1200px) {
 display: flex;
-align-items: baseline;
+align-items: baseline;    
+}}
+
+&__tablet-wrap {
+@media screen and (min-width: 768px){
+display: flex;}
 }
 
 &__contacts {
-margin-right: 70px;
+@media screen and (max-width: 1199px) {
+margin-bottom: 60px;
+text-align: center;
 }
+
+@media screen and (min-width: 1200px) {
+margin-right: 70px;
+}}
 
 &__adress {
 font-style: normal;
@@ -60,8 +73,16 @@ color: $textColorAccent;
 
 // Subscription ---------------------------------->
 .subscription {
+
+@media screen and (min-width: 1200px) {
 width: 570px;
-height: 86px;
+height: 86px;   
+margin-left: auto; 
+}
+
+@media screen and (max-width: 1199px) {
+text-align: center;
+}
 
 &__title {
 margin-bottom: 20px;
@@ -76,14 +97,26 @@ color: $backGroundColorMain;
 }
 
 &__form {
+
+@media screen and (min-width: 1200px) {
 display: flex;
-align-items: center;
-}
+align-items: center;    
+}}
 
 &__label {
-width: 358px;
+width: 450px;
 margin-right: 12px;
+
+@media screen and (min-width: 1200px) {
+width: 358px;  
 }
+
+@media screen and (max-width: 1199px) {
+display: block;
+margin-bottom: 20px;
+margin-right: auto;
+margin-left: auto;
+}}
 
 &__input {
 transition: border-color $transitionCubic;
