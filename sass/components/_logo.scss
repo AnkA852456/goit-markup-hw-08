@@ -1,10 +1,9 @@
-
-
 .logo {
 @extend %link;
-// margin-right: 93px;
 padding-top: 24px;
 padding-bottom: 24px;
+width: 134px;
+margin-right: 88px;
 
 color: $textColorAccent;
 font-family: $secondaryTextFont;
@@ -13,9 +12,24 @@ font-size: 26px;
 line-height: 1.19;
 letter-spacing: 0.03em;
 
-&__page-nav{
-color: $textColorLogo
+@media screen and (min-width: 1200px) {
+width: 145px;
+margin-right: 93px;
 }
+
+&__footer {
+margin-right: 0;
+}
+
+&__page-nav{
+color: $textColorLogo;
+
+@media screen and (min-width: 768px) {
+margin-right: 88px;
+}
+@media screen and (min-width: 1200px) {
+margin-right: 93px;
+}}
 
 &__page-footer {
 margin-right: auto;
@@ -23,12 +37,11 @@ margin-bottom: 20px;
 margin-left: 0;
 
 &--bottom {
-    color: $backGroundColorMain;
+color: $backGroundColorMain;
 }
 
 @media screen and (max-width: 767px) {
-    text-align: center;
-}
-}}
+text-align: center;
+}}}
 
 

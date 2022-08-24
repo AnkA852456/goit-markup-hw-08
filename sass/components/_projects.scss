@@ -13,6 +13,7 @@ letter-spacing: 0.03em;
 color: $textColorHeaders;
 }
 
+// Project-buttons -------------------->
 &__button-list {
 @extend %list;
 display: flex;
@@ -20,33 +21,59 @@ justify-content: center;
 margin-left: auto;
 margin-right: auto;
 margin-bottom: 50px;
-}
+
+@media screen and (max-width: 767px) {
+flex-wrap: wrap;
+justify-content: flex-start;
+}}
 
 &__button-item {
 &:not(:last-child) {
 margin-right: 8px;
-}}}
+}
+
+@media screen and (max-width: 767px) {
+margin-bottom: 15px;}
+}}
 
 // CARDS ------------------------------>
 .projects-card {
 &__list {
 @extend %list;
+
+@media screen and (min-width: 768px) {
 display: flex;
 flex-wrap: wrap;
-}
+}}
 
 &__item {
-flex-basis: calc((100% - 2 * 30px)/3);
+
+@media screen and (max-width: 767px) {
+&:not(:last-child) {
+margin-bottom: 30px;}  
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px){
+flex-basis: calc((100% - 30px)/2);
+margin-bottom: 30px;
+
+&:nth-child(2n+1) {
+margin-right: 30px;}
+
+&:nth-last-child(-n + 2) {
+margin-bottom: 0;}}
+
+@media screen and (min-width: 1200px) {
+flex-basis: calc((100% - 2 * 30px) / 3); 
 margin-right: 30px;
 margin-bottom: 30px;
 
 &:nth-child(3n) {
-margin-right: 0;
-}
+margin-right: 0;}
 
 &:nth-last-child(-n + 3) {
 margin-bottom: 0;
-}}
+}}}
 
 &__link {
 @extend %link;
