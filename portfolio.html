@@ -17,39 +17,91 @@
   </head>
   <body>
     <!--Head of page-->
-    <header>
+     <header>
       <div class="container">
         <div class="page-header">
-          <nav class="page-nav">
-            <a class="logo" lang="en" href="">
-              Web<span class="logo__page-nav">Studio</span></a
-            >
-            <ul class="site-nav">
-              <li class="site-nav__item"><a class="site-nav__link" href="./index.html">Студія</a></li>
-              <li class="site-nav__item">
-                <a class="site-nav__link site-nav__link--current" href="">Портфоліо</a>
+          <a class="logo" lang="en" href="">
+            Web<span class="logo__page-nav">Studio</span></a
+          >
+
+          <div class="menu-container" id="menu-container" data-menu>
+            <nav class="page-nav">
+              <ul class="site-nav">
+                <li class="site-nav__item">
+                  <a class="site-nav__link" href="./index.html"
+                    >Студія</a
+                  >
+                </li>
+                <li class="site-nav__item">
+                  <a class="site-nav__link site-nav__link--current" href=""
+                    >Портфоліо</a
+                  >
+                </li>
+                <li class="site-nav__item">
+                  <a class="site-nav__link" href="">Контакти</a>
+                </li>
+              </ul>
+            </nav>
+            <ul class="auth-nav">
+              <li class="auth-nav__item auth-nav__item--menu-mobile">
+                <a
+                  class="auth-nav__link auth-nav__link--menu-mobile"
+                  href="mailto:info@devstudio.com"
+                >
+                  <svg width="16px" height="12px" class="auth-nav__icon">
+                    <use href="./images/icons.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
               </li>
-              <li class="site-nav__item"><a class="site-nav__link" href="">Контакти</a></li>
+              <li class="auth-nav__item auth-nav__item--menu-mobile-secondary">
+                <a
+                  class="auth-nav__link auth-nav__link--menu-mobile-secondary"
+                  href="tel:+380961111111"
+                >
+                  <svg class="auth-nav__icon" width="10" height="16">
+                    <use href="./images/icons.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
             </ul>
-          </nav>
-          <ul class="auth-nav">
-            <li class="auth-nav__item">
-              <a class="auth-nav__link" href="mailto:info@devstudio.com">
-                <svg width="16px" height="12px" class="auth-nav__icon">
-                  <use href="./images/icons.svg#icon-envelope"></use>
-                </svg>
-                info@devstudio.com</a
-              >
-            </li>
-            <li class="auth-nav__item">
-              <a class="auth-nav__link" href="tel:+380961111111">
-                <svg class="auth-nav__icon" width="10" height="16">
-                  <use href="./images/icons.svg#icon-smartphone"></use>
-                </svg>
-                +38 096 111 11 11</a
-              >
-            </li>
-          </ul>
+            <ul class="social-links--menu-mobile-list">
+              <li class="social-links--menu-mobile-item">
+                <a class="social-links--menu-mobile-link" href="">Instagram</a
+                ><span class="slash">|</span>
+              </li>
+              <li class="social-links--menu-mobile-item">
+                <a class="social-links--menu-mobile-link" href="">Twitter</a
+                ><span class="slash">|</span>
+              </li>
+              <li class="social-links--menu-mobile-item">
+                <a class="social-links--menu-mobile-link" href="">Facebook</a
+                ><span class="slash">|</span>
+              </li>
+              <li class="social-links--menu-mobile-item">
+                <a class="social-links--menu-mobile-link" href="">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+          <button
+            class="button__menu is-open"
+            type="button"
+            aria-expanded="true"
+            aria-controls="menu-container"
+            data-menu-button
+          >
+            <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+              <use
+                class="button__icon--close"
+                href="./images/icons.svg#icon-menu_40px"
+              ></use>
+              <use
+                class="button__icon--burger"
+                href="./images/icons.svg#icon-close_40px"
+              ></use>
+            </svg>
+          </button>
         </div>
       </div>
     </header>
@@ -88,9 +140,10 @@
               <a class="projects-card__link" href="">
                 <div class="projects-overlay">
                   <img
-                    src="./images/technjkryak.jpg"
+                  srcset="./images/tehnokryak.jpg 1x, ./images/tehnokryak@2x.jpg 2x"
+                    src="./images/tehnokryak.jpg"
                     alt="технокряк"
-                    width="370"
+                    width="450"
                     height="294"
                   />
                   <p class="projects-overlay__text">
@@ -110,9 +163,10 @@
               <a class="projects-card__link" href="">
                 <div class="projects-overlay">
                   <img
+                  srcset="./images/orlean.jpg 1x, ./images/orlean@2x.jpg 2x"
                     src="./images/orlean.jpg"
                     alt="орлеан"
-                    width="370"
+                    width="450"
                     height="294"
                   />
                   <p class="projects-overlay__text">Слава Україні!</p>
@@ -130,9 +184,10 @@
               <a class="projects-card__link" href="">
                 <div class="projects-overlay">
                   <img
+                  srcset="./images/seafood.jpg 1x, ./images/seafood@2x.jpg 2x"
                     src="./images/seafood.jpg"
-                    alt="морепродукты"
-                    width="370"
+                    alt="морепродукти"
+                    width="450"
                     height="294"
                   />
                   <p class="projects-overlay__text--yellow">Героям Слава!</p>
@@ -150,9 +205,10 @@
               <a class="projects-card__link" href="">
                 <div class="projects-overlay">
                   <img
+                  srcset="./images/prime.jpg 1x, ./images/prime@2x.jpg 2x"
                     src="./images/prime.jpg"
                     alt="прайм"
-                    width="370"
+                    width="450"
                     height="294"
                   />
                   <p class="projects-overlay__text">Слава Україні!</p>
@@ -169,9 +225,10 @@
               <a class="projects-card__link" href="">
                 <div class="projects-overlay">
                   <img
+                  srcset="./images/boxes.jpg 1x, ./images/boxes@2x.jpg 2x"
                     src="./images/boxes.jpg"
                     alt="коробки"
-                    width="370"
+                    width="450"
                     height="294"
                   />
                   <p class="projects-overlay__text">Слава Україні!</p>
@@ -188,9 +245,10 @@
               <a class="projects-card__link" href="">
                 <div class="projects-overlay">
                   <img
-                    src="./images/inspiration.jpg"
-                    alt="вдохновение"
-                    width="370"
+                  srcset="./images/borders.jpg 1x, ./images/borders@2x.jpg 2x"
+                    src="./images/borders.jpg"
+                    alt="натхнення"
+                    width="450"
                     height="294"
                   />
                   <p class="projects-overlay__text">Слава Україні!</p>
@@ -207,9 +265,10 @@
               <a class="projects-card__link" href="">
                 <div class="projects-overlay">
                   <img
-                    src="./images/edition.jpg"
-                    alt="издание"
-                    width="370"
+                  srcset="./images/le.jpg 1x, ./images/le@2x.jpg 2x"
+                    src="./images/le.jpg"
+                    alt="видання"
+                    width="450"
                     height="294"
                   />
                   <p class="projects-overlay__text">Слава Україні!</p>
@@ -226,9 +285,10 @@
               <a class="projects-card__link" href="">
                 <div class="projects-overlay">
                   <img
+                  srcset="./images/lab.jpg 1x, ./images/lab@2x.jpg 2x"
                     src="./images/lab.jpg"
-                    alt="лаборатория"
-                    width="370"
+                    alt="лабораторія"
+                    width="450"
                     height="294"
                   />
                   <p class="projects-overlay__text">Слава Україні!</p>
@@ -245,9 +305,10 @@
               <a class="projects-card__link" href="">
                 <div class="projects-overlay">
                   <img
-                    src="./images/growing.jpg"
-                    alt="рост бизнеса"
-                    width="370"
+                  srcset="./images/business.jpg 1x, ./images/business@2x.jpg 2x"
+                    src="./images/business.jpg"
+                    alt="зростання бізнесу"
+                    width="450"
                     height="294"
                   />
                   <p class="projects-overlay__text">Слава Україні!</p>
@@ -264,72 +325,90 @@
     </main>
      <footer class="page-footer">
       <div class="container page-footer__wrap">
-       <div class="page-footer__tablet-wrap">
-        <div class="page-footer__contacts">
-          <div class="logo__page-footer">
-            <a class="logo" lang="en" href=""
-              >Web<span class="logo__page-footer--bottom">Studio</span></a
-            >
+        <div class="page-footer__tablet-wrap">
+          <div class="page-footer__contacts">
+            <div class="logo__page-footer">
+              <a class="logo logo__footer" lang="en" href=""
+                >Web<span class="logo__page-footer--bottom">Studio</span></a
+              >
+            </div>
+            <!--Contacts-->
+            <address class="page-footer__adress">
+              <ul class="page-footer__contacts-list">
+                <li class="page-footer__map">
+                  <a
+                    class="page-footer__map-link page-footer__map-link--white"
+                    href="https://goo.gl/maps/4PBvdfhSK9omXk1a7"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    >м. Київ, пр-т Лесі Українки, 26</a
+                  >
+                </li>
+                <li class="page-footer__mail">
+                  <a
+                    class="page-footer__mail-link page-footer__mail-link--grey"
+                    href="mailto:info@example.com"
+                    >info@example.com</a
+                  >
+                </li>
+                <li class="page-footer__tel">
+                  <a
+                    class="page-footer__tel-link page-footer__tel-link--grey"
+                    href="tel:+380991111111"
+                    >+38 099 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
           </div>
-          <!--Contacts-->
-          <address class="page-footer__adress">
-            <ul class="page-footer__contacts-list">
-              <li class="page-footer__map">
+          <!-- Social links -->
+          <div class="socials">
+            <p class="socials-list__title">Приєднуйтесь</p>
+            <ul class="socials-list__footer">
+              <li class="socials-item__footer">
                 <a
-                  class="page-footer__map-link page-footer__map-link--white"
-                  href="https://goo.gl/maps/4PBvdfhSK9omXk1a7"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  >м. Київ, пр-т Лесі Українки, 26</a
+                  class="socials-link__footer socials-link__footer--bgc"
+                  href=""
                 >
+                  <svg class="socials-image--bottom" width="20px" height="20px">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="page-footer__mail">
-                <a class="page-footer__mail-link page-footer__mail-link--grey" href="mailto:info@example.com"
-                  >info@example.com</a
+              <li class="socials-item__footer">
+                <a
+                  class="socials-link__footer socials-link__footer--bgc"
+                  href=""
                 >
+                  <svg class="socials-image--bottom" width="20px" height="20px">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="page-footer__tel">
-                <a class="page-footer__tel-link page-footer__tel-link--grey" href="tel:+380991111111">+38 099 111 11 11</a>
+              <li class="socials-item__footer">
+                <a
+                  class="socials-link__footer socials-link__footer--bgc"
+                  href=""
+                >
+                  <svg class="socials-image--bottom" width="20px" height="20px">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials-item__footer">
+                <a
+                  class="socials-link__footer socials-link__footer--bgc"
+                  href=""
+                >
+                  <svg class="socials-image--bottom" width="20px" height="20px">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
+          </div>
         </div>
-        <!-- Social links -->
-        <div class="socials">
-          <p class="socials-list__title">Приєднуйтесь</p>
-          <ul class="socials-list__footer">
-            <li class="socials-item__footer">
-              <a class="socials-link__footer socials-link__footer--bgc" href="">
-                <svg class="socials-image--bottom" width="20px" height="20px">
-                  <use href="./images/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="socials-item__footer">
-              <a class="socials-link__footer socials-link__footer--bgc" href="">
-                <svg class="socials-image--bottom" width="20px" height="20px">
-                  <use href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="socials-item__footer">
-              <a class="socials-link__footer socials-link__footer--bgc" href="">
-                <svg class="socials-image--bottom" width="20px" height="20px">
-                  <use href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="socials-item__footer">
-              <a class="socials-link__footer socials-link__footer--bgc" href="">
-                <svg class="socials-image--bottom" width="20px" height="20px">
-                  <use href="./images/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-       </div>
-       
+
         <div class="subscription">
           <p class="subscription__title">Підпишіться на розсилку</p>
           <form class="subscription__form">
@@ -348,5 +427,6 @@
         </div>
       </div>
     </footer>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

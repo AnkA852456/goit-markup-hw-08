@@ -10,10 +10,9 @@ text-align: center;
 width: 206px;
 
 @media screen and (max-width: 1199px) {
-    margin-right: auto;
-    margin-left: auto;
-}
-}
+margin-right: auto;
+margin-left: auto;
+}}
 
 &__title {
 margin-bottom: 20px;
@@ -30,13 +29,13 @@ color: $backGroundColorMain;
 .socials {
 
 @media screen and (max-width: 1199px) {
-    margin-bottom: 60px;
-    text-align: center;
+margin-bottom: 60px;
+text-align: center;
 }
+
 @media screen and (min-width:768px) and (max-width: 1199px) {
-    margin-left: auto;
-}
-}
+margin-left: auto;
+}}
 
 .socials-item {
 

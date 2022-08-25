@@ -196,6 +196,7 @@ fill: $textColorAccent;
 
 @media screen and (max-width: 767px) {
 position: absolute;
+z-index: 999;
 top: 100%;
 left: 0;
 width: 100vw;  
