@@ -13,7 +13,8 @@ display: flex;
 
 &__tablet-wrap {
 @media screen and (min-width: 768px){
-display: flex;}
+display: flex;
+justify-content: center;}
 }
 
 &__contacts {

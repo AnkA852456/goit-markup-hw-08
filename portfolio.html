@@ -17,20 +17,35 @@
   </head>
   <body>
     <!--Head of page-->
-     <header>
+    <header>
       <div class="container">
         <div class="page-header">
           <a class="logo" lang="en" href="">
             Web<span class="logo__page-nav">Studio</span></a
           >
-
+          <button
+            class="button__menu is-open"
+            type="button"
+            aria-expanded="true"
+            aria-controls="menu-container"
+            data-menu-button
+          >
+            <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+              <use
+                class="button__icon--close"
+                href="./images/icons.svg#icon-menu_40px"
+              ></use>
+              <use
+                class="button__icon--burger"
+                href="./images/icons.svg#icon-close_40px"
+              ></use>
+            </svg>
+          </button>
           <div class="menu-container" id="menu-container" data-menu>
             <nav class="page-nav">
               <ul class="site-nav">
                 <li class="site-nav__item">
-                  <a class="site-nav__link" href="./index.html"
-                    >Студія</a
-                  >
+                  <a class="site-nav__link" href="./index.html">Студія</a>
                 </li>
                 <li class="site-nav__item">
                   <a class="site-nav__link site-nav__link--current" href=""
@@ -84,24 +99,6 @@
               </li>
             </ul>
           </div>
-          <button
-            class="button__menu is-open"
-            type="button"
-            aria-expanded="true"
-            aria-controls="menu-container"
-            data-menu-button
-          >
-            <svg width="40" height="40" aria-label="Перемикач мобільного меню">
-              <use
-                class="button__icon--close"
-                href="./images/icons.svg#icon-menu_40px"
-              ></use>
-              <use
-                class="button__icon--burger"
-                href="./images/icons.svg#icon-close_40px"
-              ></use>
-            </svg>
-          </button>
         </div>
       </div>
     </header>
@@ -109,14 +106,15 @@
       <section class="projects">
         <div class="container">
           <!-- Project examples  -->
-          <h1 class="projects__title visually-hidden">
-            Project examples
-          </h1>
+          <h1 class="projects__title visually-hidden">Project examples</h1>
           <!--h1 to hide-->
           <!-- Filter -->
           <ul class="projects__button-list">
             <li class="projects__button-item">
-              <button class="button-projects button-projects--current" type="button">
+              <button
+                class="button-projects button-projects--current"
+                type="button"
+              >
                 Всі
               </button>
             </li>
@@ -139,13 +137,35 @@
             <li class="projects-card__item">
               <a class="projects-card__link" href="">
                 <div class="projects-overlay">
-                  <img
-                  srcset="./images/tehnokryak.jpg 1x, ./images/tehnokryak@2x.jpg 2x"
-                    src="./images/tehnokryak.jpg"
-                    alt="технокряк"
-                    width="450"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/tehnokryak.jpg    1x,
+                        ./images/tehnokryak@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tehnokryak-tablet.jpg    1x,
+                        ./images/tehnokryak-tablet@2x.jpg 2x
+                      "
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tehnokryak-desktop.jpg    1x,
+                        ./images/tehnokryak-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/tehnokryak.jpg"
+                      alt="технокряк"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
                   <p class="projects-overlay__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -162,13 +182,32 @@
             <li class="projects-card__item">
               <a class="projects-card__link" href="">
                 <div class="projects-overlay">
-                  <img
-                  srcset="./images/orlean.jpg 1x, ./images/orlean@2x.jpg 2x"
-                    src="./images/orlean.jpg"
-                    alt="орлеан"
-                    width="450"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/orlean.jpg 1x, ./images/orlean@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/orlean-tablet.jpg    1x,
+                        ./images/orlean-tablet@2x.jpg 2x
+                      "
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/orlean-desktop.jpg    1x,
+                        ./images/orlean-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/orlean.jpg"
+                      alt="орлеан"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
                   <p class="projects-overlay__text">Слава Україні!</p>
                 </div>
                 <div class="projects-card__wrap">
@@ -183,13 +222,35 @@
             <li class="projects-card__item">
               <a class="projects-card__link" href="">
                 <div class="projects-overlay">
-                  <img
-                  srcset="./images/seafood.jpg 1x, ./images/seafood@2x.jpg 2x"
-                    src="./images/seafood.jpg"
-                    alt="морепродукти"
-                    width="450"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/seafood.jpg    1x,
+                        ./images/seafood@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/seafood-tablet.jpg    1x,
+                        ./images/seafood-tablet@2x.jpg 2x
+                      "
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/seafood-desktop.jpg    1x,
+                        ./images/seafood-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/seafood.jpg"
+                      alt="морепродукти"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
                   <p class="projects-overlay__text--yellow">Героям Слава!</p>
                 </div>
                 <div class="projects-card__wrap">
@@ -204,13 +265,32 @@
             <li class="projects-card__item">
               <a class="projects-card__link" href="">
                 <div class="projects-overlay">
-                  <img
-                  srcset="./images/prime.jpg 1x, ./images/prime@2x.jpg 2x"
-                    src="./images/prime.jpg"
-                    alt="прайм"
-                    width="450"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/prime.jpg 1x, ./images/prime@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/prime-tablet.jpg    1x,
+                        ./images/prime-tablet@2x.jpg 2x
+                      "
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/prime-desktop.jpg    1x,
+                        ./images/prime-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/prime.jpg"
+                      alt="прайм"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
                   <p class="projects-overlay__text">Слава Україні!</p>
                 </div>
                 <div class="projects-card__wrap">
@@ -224,13 +304,33 @@
             <li class="projects-card__item">
               <a class="projects-card__link" href="">
                 <div class="projects-overlay">
-                  <img
-                  srcset="./images/boxes.jpg 1x, ./images/boxes@2x.jpg 2x"
-                    src="./images/boxes.jpg"
-                    alt="коробки"
-                    width="450"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/boxes.jpg 1x, ./images/boxes@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/boxes-tablet.jpg    1x,
+                        ./images/boxes-tablet@2x.jpg 2x
+                      "
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/boxes-desktop.jpg    1x,
+                        ./images/boxes-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/boxes.jpg"
+                      alt="коробки"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <p class="projects-overlay__text">Слава Україні!</p>
                 </div>
                 <div class="projects-card__wrap">
@@ -244,13 +344,36 @@
             <li class="projects-card__item">
               <a class="projects-card__link" href="">
                 <div class="projects-overlay">
-                  <img
-                  srcset="./images/borders.jpg 1x, ./images/borders@2x.jpg 2x"
-                    src="./images/borders.jpg"
-                    alt="натхнення"
-                    width="450"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/borders.jpg    1x,
+                        ./images/borders@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/borders-tablet.jpg    1x,
+                        ./images/borders-tablet@2x.jpg 2x
+                      "
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/borders-desktop.jpg    1x,
+                        ./images/borders-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/borders.jpg"
+                      alt="натхнення"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <p class="projects-overlay__text">Слава Україні!</p>
                 </div>
                 <div class="projects-card__wrap">
@@ -264,13 +387,33 @@
             <li class="projects-card__item">
               <a class="projects-card__link" href="">
                 <div class="projects-overlay">
-                  <img
-                  srcset="./images/le.jpg 1x, ./images/le@2x.jpg 2x"
-                    src="./images/le.jpg"
-                    alt="видання"
-                    width="450"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/le.jpg 1x, ./images/le@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/le-tablet.jpg    1x,
+                        ./images/le-tablet@2x.jpg 2x
+                      "
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/le-desktop.jpg    1x,
+                        ./images/le-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/le.jpg"
+                      alt="видання"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <p class="projects-overlay__text">Слава Україні!</p>
                 </div>
                 <div class="projects-card__wrap">
@@ -284,13 +427,32 @@
             <li class="projects-card__item">
               <a class="projects-card__link" href="">
                 <div class="projects-overlay">
-                  <img
-                  srcset="./images/lab.jpg 1x, ./images/lab@2x.jpg 2x"
-                    src="./images/lab.jpg"
-                    alt="лабораторія"
-                    width="450"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/lab.jpg 1x, ./images/lab@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/lab-tablet.jpg    1x,
+                        ./images/lab-tablet@2x.jpg 2x
+                      "
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/lab-desktop.jpg    1x,
+                        ./images/lab-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/lab.jpg"
+                      alt="лабораторія"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
                   <p class="projects-overlay__text">Слава Україні!</p>
                 </div>
                 <div class="projects-card__wrap">
@@ -304,17 +466,41 @@
             <li class="projects-card__item">
               <a class="projects-card__link" href="">
                 <div class="projects-overlay">
-                  <img
-                  srcset="./images/business.jpg 1x, ./images/business@2x.jpg 2x"
-                    src="./images/business.jpg"
-                    alt="зростання бізнесу"
-                    width="450"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/business.jpg    1x,
+                        ./images/business@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/business-tablet.jpg    1x,
+                        ./images/business-tablet@2x.jpg 2x
+                      "
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/business-desktop.jpg    1x,
+                        ./images/business-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/business.jpg"
+                      alt="зростання бізнесу"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
                   <p class="projects-overlay__text">Слава Україні!</p>
                 </div>
                 <div class="projects-card__wrap">
-                  <h2 class="projects-card__name" lang="en">Growing Business</h2>
+                  <h2 class="projects-card__name" lang="en">
+                    Growing Business
+                  </h2>
                   <p class="projects-card__type">Додаток</p>
                 </div>
               </a>
@@ -323,7 +509,7 @@
         </div>
       </section>
     </main>
-     <footer class="page-footer">
+    <footer class="page-footer">
       <div class="container page-footer__wrap">
         <div class="page-footer__tablet-wrap">
           <div class="page-footer__contacts">

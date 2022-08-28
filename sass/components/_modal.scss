@@ -2,6 +2,8 @@
 position: fixed;
 top: 0;
 left: 0;
+z-index: 99;
+
 background-color: rgba(0, 0, 0, 0.2);
 width: 100%;
 height: 100%;
@@ -169,20 +171,28 @@ background-size: contain;
 &__text {
 font-family: $mainTextFont;
 color: $textColorMain;
-font-size: 14px;
-line-height: 1.71;
+font-size: 12px;
+line-height: 1.17;
 letter-spacing: 0.03em;
-}
+
+@media screen and (min-width: 1200px) {
+font-size: 14px;
+line-height: 1.71;    
+}}
 
 &__link {
 @extend %link;
 color: $textColorAccent;
 text-decoration: none;
-font-size: 14px;
-line-height: 1.71;
+font-size: 12px;
+line-height: 1.17;
 letter-spacing: 0.03em;
 border-bottom: 2px solid $textColorAccent;
-}}
+
+@media screen and (min-width: 1200px) {
+font-size: 14px;
+line-height: 1.71;    
+}}}
 
 +.checkbox__icon {
 .checkbox__input:checked & {background-color: $textColorAccent;}

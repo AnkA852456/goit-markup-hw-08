@@ -7,7 +7,11 @@ display: flex;
 align-items: center;
 justify-content: center;
 text-align: center;
+// width: 206px;
+
+@media screen and (min-width: 480px) {
 width: 206px;
+}
 
 @media screen and (max-width: 1199px) {
 margin-right: auto;
@@ -34,7 +38,7 @@ text-align: center;
 }
 
 @media screen and (min-width:768px) and (max-width: 1199px) {
-margin-left: auto;
+margin-left: 165px;
 }}
 
 .socials-item {
@@ -47,9 +51,10 @@ height: 44px;
 align-items: center;
 justify-content: center;
 
+@media screen and (min-width: 480px) {
 &:not(:last-child){
 margin-right: 10px;
-}}}
+}}}}
 
 .socials-link {   
 &__section-comand,

@@ -1,6 +1,6 @@
 .button {
 display: inline-block;
-min-width: 216px;
+// min-width: 216px;
 border-radius: 4px;
 padding: 10px 32px;
 text-align: center;
@@ -24,13 +24,18 @@ cursor: pointer;
 background-color: #188ce8;  
 }
 
+@media screen and (min-width: 480xp) {
+min-width: 216px;   
+}
+
 &__subscribe {
 display: flex;
+flex-wrap: wrap;
 align-items: center;
 justify-content: center;
 padding: 10px 28px;
-min-width: 200px;
-height: 50px;  
+// min-width: 200px;
+// height: 50px;  
 
 &::after {
 content: "";
@@ -42,6 +47,11 @@ display: flex;
 width: 24px;
 height: 24px;
 margin-left: 10px;
+}
+
+@media screen and (min-width: 480px) {
+min-width: 200px;
+height: 50px;     
 }}}
 
 .button__modal {
@@ -117,6 +127,10 @@ min-width: 40px;
 display: flex;
 align-items: center;
 justify-content: center;
+z-index: 15;
+
+position: fixed;
+right: 0;
 
 padding: 0;
 margin: 0;

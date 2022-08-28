@@ -26,7 +26,24 @@
           <a class="logo" lang="en" href="">
             Web<span class="logo__page-nav">Studio</span></a
           >
-
+          <button
+            class="button__menu is-open"
+            type="button"
+            aria-expanded="true"
+            aria-controls="menu-container"
+            data-menu-button
+          >
+            <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+              <use
+                class="button__icon--close"
+                href="./images/icons.svg#icon-menu_40px"
+              ></use>
+              <use
+                class="button__icon--burger"
+                href="./images/icons.svg#icon-close_40px"
+              ></use>
+            </svg>
+          </button>
           <div class="menu-container" id="menu-container" data-menu>
             <nav class="page-nav">
               <ul class="site-nav">
@@ -87,24 +104,6 @@
               </li>
             </ul>
           </div>
-          <button
-            class="button__menu is-open"
-            type="button"
-            aria-expanded="true"
-            aria-controls="menu-container"
-            data-menu-button
-          >
-            <svg width="40" height="40" aria-label="Перемикач мобільного меню">
-              <use
-                class="button__icon--close"
-                href="./images/icons.svg#icon-menu_40px"
-              ></use>
-              <use
-                class="button__icon--burger"
-                href="./images/icons.svg#icon-close_40px"
-              ></use>
-            </svg>
-          </button>
         </div>
       </div>
     </header>
@@ -217,16 +216,35 @@
           <h2 class="section-comand__title">Наша команда</h2>
           <ul class="section-comand__list">
             <li class="section-comand__item">
-              <img
-                srcset="
-                  ./images/igor-mobile.jpg    1x,
-                  ./images/igor-mobile@2x.jpg 2x
-                "
-                src="./images/igor-mobile.jpg"
-                alt="Ігор Дем'яненко"
-                width="450"
-                height="460"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/igor-mobile.jpg    1x,
+                    ./images/igor-mobile@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/igor-tablet.jpg    1x,
+                    ./images/igor-tablet@2x.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./images/igor-desktop.jpg    1x,
+                    ./images/igor-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="./images/igor-mobile.jpg"
+                  alt="Ігор Дем'яненко"
+                  width="450"
+                  height="460"
+                />
+              </picture>
               <div class="section-comand__designers">
                 <h3 class="section-comand__name">Ігор Дем'яненко</h3>
                 <p class="section-comand__position" lang="en">
@@ -281,16 +299,35 @@
               </div>
             </li>
             <li class="section-comand__item">
-              <img
-                srcset="
-                  ./images/olga-mobile.jpg    1x,
-                  ./images/olga-mobile@2x.jpg 2x
-                "
-                src="./images/olga-mobile.jpg"
-                alt="Ольга Рєпіна"
-                width="450"
-                height="460"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/olga-mobile.jpg    1x,
+                    ./images/olga-mobile@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/olga-tablet.jpg    1x,
+                    ./images/olga-tablet@2x.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./images/olga-desktop.jpg    1x,
+                    ./images/olga-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="./images/olga-mobile.jpg"
+                  alt="Ольга Рєпіна"
+                  width="450"
+                  height="460"
+                />
+              </picture>
               <div class="section-comand__designers">
                 <h3 class="section-comand__name">Ольга Рєпіна</h3>
                 <p class="section-comand__position" lang="en">
@@ -345,16 +382,35 @@
               </div>
             </li>
             <li class="section-comand__item">
-              <img
-                srcset="
-                  ./images/mik-mobile.jpg    1x,
-                  ./images/mik-mobile@2x.jpg 2x
-                "
-                src="./images/mik-mobile.jpg"
-                alt="Микола Тарасов"
-                width="450"
-                height="460"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/mik-mobile.jpg    1x,
+                    ./images/mik-mobile@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/mik-tablet.jpg    1x,
+                    ./images/mik-tablet@2x.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./images/mik-desktop.jpg    1x,
+                    ./images/mik-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="./images/mik-mobile.jpg"
+                  alt="Микола Тарасов"
+                  width="450"
+                  height="460"
+                />
+              </picture>
               <div class="section-comand__designers">
                 <h3 class="section-comand__name">Микола Тарасов</h3>
                 <p class="section-comand__position" lang="en">Marketing</p>
@@ -408,16 +464,35 @@
               </div>
             </li>
             <li class="section-comand__item">
-              <img
-                srcset="
-                  ./images/mih-mobile.jpg    1x,
-                  ./images/mih-mobile@2x.jpg 2x
-                "
-                src="./images/me.jpg"
-                alt="Михайло Єрмаков"
-                width="450"
-                height="460"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/mih-mobile.jpg    1x,
+                    ./images/mih-mobile@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/mih-tablet.jpg    1x,
+                    ./images/mih-tablet@2x.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./images/mih-desktop.jpg    1x,
+                    ./images/mih-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="./images/mih-mobile.jpg"
+                  alt="Михайло Єрмаков"
+                  width="450"
+                  height="460"
+                />
+              </picture>
               <div class="section-comand__designers">
                 <h3 class="section-comand__name">Михайло Єрмаков</h3>
                 <p class="section-comand__position" lang="en">UI Designer</p>
