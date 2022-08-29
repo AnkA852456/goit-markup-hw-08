@@ -45,7 +45,7 @@ flex-basis: calc((100% - 30px)/2);
 flex-basis: calc((100% - 3 * 30px)/4);
 }}
 
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
 .section-comand__item:nth-child(2n+1) {
 margin-right: 30px;
 margin-bottom: 0;
@@ -90,5 +90,6 @@ letter-spacing: 0.03em;
 font-size: 16px;
 margin-bottom: 16px;
 text-align: center;
+color: $textColorMain;
 }}
 

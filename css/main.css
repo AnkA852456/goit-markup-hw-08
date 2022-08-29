@@ -604,7 +604,8 @@ header {
           justify-content: center;
   z-index: 15;
   position: fixed;
-  right: 0;
+  top: 10px;
+  right: 15px;
   padding: 0;
   margin: 0;
   margin-left: auto;
@@ -626,6 +627,10 @@ header {
 }
 .button__menu.is-open .button__icon--burger {
   display: none;
+}
+
+.button__menu.is-open {
+  position: absolute;
 }
 
 .section-principles {
@@ -930,7 +935,7 @@ header {
         flex-basis: calc((100% - 90px) / 4);
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .section-comand .section-comand__item:nth-child(2n+1) {
     margin-right: 30px;
     margin-bottom: 0;
@@ -972,6 +977,7 @@ header {
   font-size: 16px;
   margin-bottom: 16px;
   text-align: center;
+  color: #757575;
 }
 
 .section-clients {
@@ -1088,6 +1094,9 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1098,6 +1107,9 @@ header {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
   }
 }
 @media screen and (max-width: 1199px) {
@@ -1203,7 +1215,7 @@ header {
   -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 15px 16px;
-  width: 358px;
+  width: 100%;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -1220,6 +1232,11 @@ header {
 }
 .subscription__input:hover, .subscription__input:focus {
   border-color: #2196f3;
+}
+@media screen and (min-width: 480px) {
+  .subscription__input {
+    width: 358px;
+  }
 }
 
 .backdrop {
