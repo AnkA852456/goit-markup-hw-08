@@ -1,6 +1,5 @@
 .button {
 display: inline-block;
-// min-width: 216px;
 border-radius: 4px;
 padding: 10px 32px;
 text-align: center;
@@ -34,8 +33,6 @@ flex-wrap: wrap;
 align-items: center;
 justify-content: center;
 padding: 10px 28px;
-// min-width: 200px;
-// height: 50px;  
 
 &::after {
 content: "";
@@ -143,16 +140,21 @@ cursor: pointer;
 
 @media screen and (min-width: 768px) {
 display: none;
+}
+
+&:hover,
+&:focus {
+fill: $textColorAccent;
 }}
 
-&__icon--close {
+&__icon--burger {
 display: none;
 
 .button__menu.is-open & {
 display: block;
 }}
 
-&__icon--burger {
+&__icon--close {
 .button__menu.is-open & {
 display:none;
 }}}

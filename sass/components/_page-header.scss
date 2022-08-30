@@ -9,6 +9,7 @@ position: relative;
 .page-header {
 display: $displayPosition;
 justify-content: space-between;
+position: relative;
 }
 
 .page-nav {
@@ -36,6 +37,12 @@ font-size: 40px;
 position: relative;
 }
 
+@media screen and (max-width: 767px) {
+&__item {
+&:not(:last-child){
+margin-bottom: 32px;
+}}}
+
 @media screen and (min-width: 768px) {
 &__item:not(:last-child) {
 margin-right: 50px;
@@ -46,7 +53,6 @@ margin-right: 50px;
 display: block;
 
 padding-top: 0px;
-padding-bottom: 32px;
 
 color: $textColorHeaders;
 
@@ -82,8 +88,6 @@ border-radius: 2px;
 
 .auth-nav {
 @extend %list;
-
-// position: relative;
 
 @media screen and (max-width: 767px){
 top: 30%;
@@ -129,23 +133,30 @@ margin-right: 50px;
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
 display: block;
-margin-top: auto;
-margin-bottom: auto;
 }
 
 &__link {
 @extend %link;
 display: $displayPosition;
 align-items: center;
-padding-top: 32px;
-padding-bottom: 32px;
 
 color: $textColorMain;
 
 transition: color $transitionCubic;
 
+&--email {
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-padding: 0;
+padding-top: 19px;
+}}
+
+&--tel {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+padding-bottom: 19px;
+}}
+
+@media screen and (min-width: 1200px) {
+padding-top: 32px;
+padding-bottom: 32px;
 }}
 
 &__icon {
@@ -157,7 +168,6 @@ display: none;
 
 @media screen and (max-width: 767px) {
 .auth-nav__item--menu-mobile {
-// position: absolute;
 top: 0;
 
 font-weight: 500;
@@ -168,8 +178,8 @@ letter-spacing: 0.02em;
 color: $textColorMain;}
 
 .auth-nav__item--menu-mobile-secondary {
-// position: absolute;
 bottom: 0;
+margin-bottom: 32px;
 
 font-weight: 500;
 font-size: 34px;

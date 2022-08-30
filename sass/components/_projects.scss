@@ -26,6 +26,8 @@ margin-left: auto;
 margin-right: auto;
 margin-bottom: 40px;
 
+gap: 8px;
+
 @media screen and (min-width: 768px){
 margin-bottom: 30px;
 }
@@ -37,16 +39,7 @@ margin-bottom: 50px;
 @media screen and (max-width: 767px) {
 flex-wrap: wrap;
 justify-content: flex-start;
-}}
-
-&__button-item {
-&:not(:last-child) {
-margin-right: 8px;
-}
-
-@media screen and (max-width: 767px) {
-margin-bottom: 15px;}
-}}
+}}}
 
 // CARDS ------------------------------>
 .projects-card {
@@ -59,7 +52,6 @@ flex-wrap: wrap;
 }}
 
 &__item {
-height: 100%;
 
 @media screen and (max-width: 767px) {
 &:not(:last-child) {
@@ -90,6 +82,7 @@ margin-bottom: 0;
 
 &__link {
 @extend %link;
+height: 100%;
 display: flex;
 flex-direction: column;
 justify-content: space-around;
