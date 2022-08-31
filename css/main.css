@@ -193,7 +193,7 @@ header {
 }
 @media screen and (min-width: 768px) {
   .auth-nav {
-    margin-left: 90px;
+    margin-left: 60px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -336,10 +336,12 @@ header {
     left: 0;
     width: 100vw;
     height: 100vh;
-    display: none;
     padding: 48px 40px;
     background-color: #ffffff;
     opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .menu-container.is-open {
     display: -webkit-box;
@@ -354,9 +356,8 @@ header {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-transition: opacity 2000ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: opacity 2000ms cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 1;
+    visibility: visible;
   }
 }
 @media screen and (min-width: 768px) {
@@ -406,7 +407,7 @@ header {
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/header-mobile.jpg);
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/header-mobile.jpg);
   background-color: #C4C4C4;
-  background-size: contain;
+  background-size: 480px 400px;
   background-repeat: no-repeat;
   background-position: center;
   padding-top: 118px;
@@ -419,31 +420,37 @@ header {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/header-mobile@2x.jpg);
   }
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 481px) {
   .section-hero {
     max-width: 768px;
     height: 400px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/header-tablet.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/header-tablet.jpg);
-    background-size: contain;
+    background-size: 768px 400px;
   }
 }
-@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 481px) and (min-device-pixel-ratio: 2), screen and (min-width: 481px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 481px) and (min-resolution: 192dpi), screen and (min-width: 481px) and (min-resolution: 2dppx) {
   .section-hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/header-tablet@2x.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/header-tablet@2x.jpg);
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .section-hero {
     max-width: 1600px;
-    height: 400px;
+    height: 600px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/header-desktop.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/header-desktop.jpg);
-    background-size: contain;
+    background-size: 1600px 600px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 769px) and (min-resolution: 192dpi), screen and (min-width: 769px) and (min-resolution: 2dppx) {
   .section-hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/header-desktop@2x.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/header-desktop@2x.jpg);
@@ -695,7 +702,7 @@ header {
         flex-basis: calc((100% - 90px) / 4);
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .section-principles .section-principles__item:nth-child(2n+1) {
     margin-right: 30px;
     margin-bottom: 0;
@@ -758,7 +765,7 @@ header {
 .section-activity {
   padding-bottom: 94px;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .section-activity {
     display: none;
   }
@@ -914,7 +921,7 @@ header {
   }
 }
 .section-comand__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-family: Roboto, sans-serif;
   font-weight: 700;
   font-size: 28px;
@@ -924,9 +931,10 @@ header {
   color: #212121;
 }
 @media screen and (min-width: 1200px) {
-  .section-comand {
+  .section-comand__title {
     font-size: 36px;
     line-height: 1.17;
+    margin-bottom: 50px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1011,7 +1019,7 @@ header {
   }
 }
 .section-clients__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
   font-size: 28px;
   line-height: 1.18;
@@ -1023,6 +1031,7 @@ header {
   .section-clients__title {
     font-size: 36px;
     line-height: 1.17;
+    margin-bottom: 50px;
   }
 }
 .section-clients__list {
@@ -1273,7 +1282,7 @@ header {
 }
 @media screen and (min-width: 480px) {
   .subscription__input {
-    width: 358px;
+    width: 450px;
   }
 }
 
@@ -1544,7 +1553,7 @@ header {
   .projects-card__item:nth-child(2n+1) {
     margin-right: 30px;
   }
-  .projects-card__item:nth-last-child(-n+2) {
+  .projects-card__item:nth-last-child(-n+1) {
     margin-bottom: 0;
   }
 }

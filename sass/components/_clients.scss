@@ -6,7 +6,7 @@ padding: 94px 0;
 }
 
 &__title {
-margin-bottom: 50px;
+margin-bottom: 30px;
 
 font-weight: 700;
 font-size: 28px;
@@ -17,7 +17,8 @@ color: $textColorHeaders;
 
 @media screen and (min-width: 1200px){
 font-size: 36px;
-line-height: 1.17;    
+line-height: 1.17; 
+margin-bottom: 50px;   
 }}
 
 &__list {
