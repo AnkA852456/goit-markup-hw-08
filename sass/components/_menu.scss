@@ -35,7 +35,7 @@ display: flex;
 
 .social-links--menu-mobile-list {
 @extend %list;
-bottom: 48px;
+margin-top: 64px;
 
 display: flex;
 flex-wrap: wrap;

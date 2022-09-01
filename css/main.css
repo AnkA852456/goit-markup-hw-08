@@ -182,7 +182,6 @@ header {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-    margin-bottom: 64px;
     margin-top: auto;
   }
 }
@@ -369,7 +368,7 @@ header {
 }
 
 .social-links--menu-mobile-list {
-  bottom: 48px;
+  margin-top: 64px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -438,7 +437,7 @@ header {
 @media screen and (min-width: 769px) {
   .section-hero {
     max-width: 1600px;
-    height: 600px;
+    height: 400px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/header-desktop.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/header-desktop.jpg);
     background-size: 1600px 600px;
@@ -448,6 +447,7 @@ header {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    background-position: top;
   }
 }
 @media screen and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 769px) and (min-resolution: 192dpi), screen and (min-width: 769px) and (min-resolution: 2dppx) {
@@ -461,6 +461,7 @@ header {
     height: auto;
     padding-top: 200px;
     padding-bottom: 200px;
+    background-size: 1600px 600px;
   }
 }
 .section-hero__title {
@@ -636,7 +637,7 @@ header {
           justify-content: center;
   z-index: 15;
   position: fixed;
-  top: 10px;
+  top: 20px;
   right: 15px;
   padding: 0;
   margin: 0;
